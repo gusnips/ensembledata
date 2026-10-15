@@ -21,9 +21,10 @@ export class EnsembleDataError extends Error {
   readonly status: number;
   readonly body: unknown;
 
-  constructor(status: number, body: unknown) {
+  constructor(status: number, body: unknown, message?: string) {
     super(
-      detailText(body) ??
+      message ??
+        detailText(body) ??
         `EnsembleData request failed (HTTP ${status}). Check the request and your token.`,
     );
     this.name = "EnsembleDataError";

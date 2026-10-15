@@ -58,6 +58,12 @@ export async function unwrap(
 ): Promise<EnsembleDataResponse> {
   const { data, error, response } = await result;
   if (!response.ok) throw new EnsembleDataError(response.status, error);
-  if (!isResponse(data)) throw new EnsembleDataError(response.status, data);
+  if (!isResponse(data)) {
+    throw new EnsembleDataError(
+      response.status,
+      data,
+      "EnsembleData answered with something that is not { data }.",
+    );
+  }
   return data;
 }

@@ -87,8 +87,13 @@ describe("EnsembleDataClient", () => {
       fetch: mock.fetch,
     });
 
-    await expect(
-      client.snapchat.userInfo({ name: "x" }),
-    ).rejects.toBeInstanceOf(EnsembleDataError);
+    const error = await client.snapchat
+      .userInfo({ name: "x" })
+      .catch((caught) => caught);
+
+    expect(error).toBeInstanceOf(EnsembleDataError);
+    expect(error.message).toBe(
+      "EnsembleData answered with something that is not { data }.",
+    );
   });
 });
