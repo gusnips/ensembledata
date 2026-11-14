@@ -1,7 +1,7 @@
 {
   "name": "@gusnips/ensembledata",
   "version": "0.1.0",
-  "packageManager": "bun@1.4.2",
+  "packageManager": "bun@1.4.4",
   "description": "Unofficial TypeScript SDK for the EnsembleData social media API: TikTok, YouTube, Instagram, Threads, Reddit, Twitter, Twitch and Snapchat",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
