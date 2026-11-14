@@ -1515,7 +1515,12 @@ export interface components {
      * @enum {string}
      */
     app__routers__reddit__Period:
-      "hour" | "day" | "week" | "month" | "year" | "all";
+      | "hour"
+      | "day"
+      | "week"
+      | "month"
+      | "year"
+      | "all";
     /**
      * Sorting
      * @description An enumeration.
@@ -1540,7 +1545,12 @@ export interface components {
      * @enum {string}
      */
     app__routers__youtube__Period:
-      "overall" | "hour" | "today" | "week" | "month" | "year";
+      | "overall"
+      | "hour"
+      | "today"
+      | "week"
+      | "month"
+      | "year";
     /**
      * Sorting
      * @description An enumeration.
